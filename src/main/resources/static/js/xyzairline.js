@@ -1,5 +1,5 @@
-var _restEndpoint = '/api/testData/';
-var _tableElement = $('#testDataTable');
+var _restEndpoint = '/api/airplaneData/';
+var _tableElement = $('#airplaneTable');
 var _deleteElement = $('#btndelete');
 
 // Define Modal

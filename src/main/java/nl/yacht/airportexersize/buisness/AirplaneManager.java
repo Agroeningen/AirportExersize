@@ -30,14 +30,15 @@ public class AirplaneManager {
         this.airplaneRepository.delete(id);
     }
 
+    //Generate test data for airline
     @PostConstruct
     private void createTestData() {
         Random rand = new Random();
-        for (int i = 0; i < 15; ++i) {
+        for (int i = 0; i < 5; ++i) {
             //rand = Math.floor(Math.rand() * 100);
             AirplaneModel airplaneModel = new AirplaneModel();
-            airplaneModel.setStatus("onGround");
-            airplaneModel.setName("Airplane " + i);
+            airplaneModel.setStatus(rand.nextBoolean());
+            airplaneModel.setName("Awesomeplane " + i);
             airplaneModel.setFuel(100);
             airplaneModel.setPassengers(101);
 

@@ -21,7 +21,10 @@ public class AirportManager {
         return this.airportRepository.findOne(id);
     }
 
-    public AirportModel saveAirplane(AirportModel airportModel) {
+    public AirportModel saveAirport(AirportModel airportModel) {
         return this.airportRepository.save(airportModel);
+    }
+    public void deleteOrder(Long id) {
+        this.airportRepository.delete(id);
     }
 }

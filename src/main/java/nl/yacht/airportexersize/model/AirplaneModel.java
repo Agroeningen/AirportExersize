@@ -13,7 +13,7 @@ public class AirplaneModel {
     private Long id;
     private String name;
     private String type;
-    private String status;
+    private boolean status;
     private int fuel;
     private int passengers;
 
@@ -27,7 +27,7 @@ public class AirplaneModel {
         this.id = id;
         this.name = name;
         this.type = type;
-        this.status = status;
+
         this.fuel = fuel;
         this.passengers = passengers;
     }
@@ -57,11 +57,11 @@ public class AirplaneModel {
         this.type = type;
     }
 
-    public String getStatus() {
+    public boolean isStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 

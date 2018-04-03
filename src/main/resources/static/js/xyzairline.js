@@ -5,8 +5,11 @@ var _deleteElement = $('#btndelete');
 // Define Modal
 var _modalElement = $('#entryModal');
 
-// Define add Dish button
-var _dishButton = $('#addDataBtn');
+// Define add airplane button
+var _airplaneButton = $('#addAirplaneBtn');
+
+// Define refuel airplane button
+var _refuelAllButton = $('#refuelAirplaneBtn');
 
 var _dataTable = _tableElement.DataTable({
     ajax: {
@@ -17,8 +20,12 @@ var _dataTable = _tableElement.DataTable({
 });
 
 
-_dishButton.on('click', function(){
+_airplaneButton.on('click', function(){
     openModalForObject({},true);
+});
+
+_refuelAllButton.on('click', function(){
+    refuelAllAirplane();
 });
 
 
@@ -36,7 +43,9 @@ _tableElement.on('click', 'tr', function () {
         openModalForObject(data, false);
     });
 });
-
+function refuelAllAirplane(){
+    status: _statusField.val(300)
+}
 
 function openModalForObject(data,newEntry) {
     var _nameField = _modalElement.find('#name');

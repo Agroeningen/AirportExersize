@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
 
+//Controller for mustache
 @Controller
 @RequestMapping("")
 public class IndexController {

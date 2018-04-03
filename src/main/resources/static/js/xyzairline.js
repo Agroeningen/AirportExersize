@@ -37,19 +37,27 @@ _tableElement.on('click', 'tr', function () {
     });
 });
 
+
 function openModalForObject(data,newEntry) {
     var _nameField = _modalElement.find('#name');
-    var _valueField = _modalElement.find('#value');
-    var _ageField = _modalElement.find('#age');
+    var _typeField = _modalElement.find('#type');
+    var _statusField = _modalElement.find('#status');
+    var _fuelField = _modalElement.find('#fuel');
+    var _passengersField = _modalElement.find('#passengers');
+
 
     if(!newEntry){
         _nameField.val(data.name);
-        _valueField.val(data.value);
-        _ageField.val(data.age);
+        _typeField.val(data.type);
+        _statusField.val(data.status);
+        _fuelField.val(data.fuel);
+        _passengersField.val(data.passengers);
     }else{
         _nameField.val("");
-        _valueField.val("");
-        _ageField.val("");
+        _typeField.val("");
+        _statusField.val("");
+        _fuelField.val("");
+        _passengersField.val("");
     }
 
     if(newEntry){
@@ -66,15 +74,19 @@ function openModalForObject(data,newEntry) {
         if(newEntry){
             var saveData = {
                 name: _nameField.val(),
-                value: _valueField.val(),
-                age: _ageField.val()
+                type: _typeField.val(),
+                status: _statusField.val(),
+                fuel: _fuelField.val(),
+                passengers: _passengersField.val()
             };
         }else{
             var saveData = {
                 id: data.id,
                 name: _nameField.val(),
-                value: _valueField.val(),
-                age: _ageField.val()
+                type: _typeField.val(),
+                status: _statusField.val(),
+                fuel: _fuelField.val(),
+                passengers: _passengersField.val()
             };
         }
 

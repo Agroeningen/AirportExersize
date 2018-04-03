@@ -7,6 +7,7 @@ import javax.persistence.Id;
 @Entity
 public class AirplaneModel {
 
+    //Values from the created airplane
     @Id
     @GeneratedValue
     private Long id;
@@ -16,11 +17,12 @@ public class AirplaneModel {
     private int fuel;
     private int passengers;
 
-
+    //default constructor
     public AirplaneModel() {
 
     }
 
+    //Constructor, didn't need this one
     public AirplaneModel(Long id, String name, String type, String status, int fuel, int passengers) {
         this.id = id;
         this.name = name;
@@ -30,6 +32,7 @@ public class AirplaneModel {
         this.passengers = passengers;
     }
 
+    //Get and set methods
     public Long getId() {
         return id;
     }
